@@ -7,6 +7,7 @@ import Amenities from "../components/Amenities";
 import WhyMoyo from "../components/WhyMoyo";
 import CallToAction from "../components/CallToAction";
 import Section from "../components/Section";
+import CheckAvailabilityCTA from "../components/CheckAvailabilityCTA";
 
 export default function Home() {
   return (
@@ -18,23 +19,23 @@ export default function Home() {
       <ImageCarousel />
 
       {/* Room Options */}
-      <Section title="Room Options">
+      <Section title="">
         <RoomOptions />
       </Section>
 
       {/* Amenities */}
-      <Section title="Amenities">
+      <Section title="">
         <Amenities />
       </Section>
 
       {/* Why Moyo */}
-      <Section title="Why Choose Moyo">
+      <Section title="">
         <WhyMoyo />
       </Section>
 
-      {/* Call to Action */}
+      {/* Check Availability CTA */}
       <Section>
-        <CallToAction />
+        <CheckAvailabilityCTA />
       </Section>
     </PageWrapper>
   );

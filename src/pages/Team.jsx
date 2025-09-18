@@ -8,7 +8,7 @@ export default function Team() {
       <Section title="Meet the Host Team">
         <p className="text-lg leading-relaxed mb-6">
           Moyo Hostel is run by a small, dedicated team who care deeply about
-          student well-being. We’re not landlords or agents — we’re hosts,
+          student well-being. We’re not landlords or agents we’re hosts,
           mentors, and problem-solvers.
         </p>
         <ul className="list-disc list-inside space-y-4 text-moyo-dark mb-6">
@@ -25,8 +25,8 @@ export default function Team() {
           </li>
         </ul>
         <p className="text-lg leading-relaxed">
-          Our team is here to make sure you feel at home — from your first day
-          to your final exam.
+          Our team is here to make sure you feel at home from your first day to
+          your final exam.
         </p>
       </Section>
     </PageWrapper>

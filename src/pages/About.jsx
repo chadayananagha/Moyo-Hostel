@@ -20,8 +20,8 @@ export default function About() {
         <p className="text-lg leading-relaxed text-moyo-dark">
           Moyo Hostel is a premium student accommodation in Hamburg, built for
           international students who want comfort, connection, and cultural
-          support. We focus on one building — fully managed, community-first,
-          and walkable to top universities.
+          support. We focus on one building fully managed, community-first, and
+          walkable to top universities.
         </p>
       </Section>
 
@@ -53,8 +53,7 @@ export default function About() {
       <Section title="Our Mission">
         <p className="text-lg leading-relaxed text-moyo-dark">
           To create a safe, welcoming space where students from all backgrounds
-          feel at home — not just during their stay, but throughout their
-          journey.
+          feel at home not just during their stay, but throughout their journey.
         </p>
       </Section>
     </PageWrapper>
