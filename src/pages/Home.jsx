@@ -11,32 +11,34 @@ import CheckAvailabilityCTA from "../components/CheckAvailabilityCTA";
 
 export default function Home() {
   return (
-    <PageWrapper>
-      {/* Hero Section */}
+    <>
       <Hero />
+      <PageWrapper>
+        {/* Hero Section */}
 
-      {/* Carousel Section */}
-      <ImageCarousel />
+        {/* Carousel Section */}
+        <ImageCarousel />
 
-      {/* Room Options */}
-      <Section title="">
-        <RoomOptions />
-      </Section>
+        {/* Room Options */}
+        <Section title="">
+          <RoomOptions />
+        </Section>
 
-      {/* Amenities */}
-      <Section title="">
-        <Amenities />
-      </Section>
+        {/* Amenities */}
+        <Section title="">
+          <Amenities />
+        </Section>
 
-      {/* Why Moyo */}
-      <Section title="">
-        <WhyMoyo />
-      </Section>
+        {/* Why Moyo */}
+        <Section title="">
+          <WhyMoyo />
+        </Section>
 
-      {/* Check Availability CTA */}
-      <Section>
-        <CheckAvailabilityCTA />
-      </Section>
-    </PageWrapper>
+        {/* Check Availability CTA */}
+        <Section>
+          <CheckAvailabilityCTA />
+        </Section>
+      </PageWrapper>
+    </>
   );
 }
