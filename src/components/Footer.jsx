@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FiHome, FiMail, FiInfo, FiUsers } from "react-icons/fi";
+import footerBg from "../assets/footer-bg.jpeg"; // Make sure this image exists in your assets folder
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -8,17 +9,27 @@ export default function Footer() {
 
   const handleNavAndScroll = (path) => {
     if (location.pathname === path) {
-      // Already on the page—just scroll up
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      // Navigate and let ScrollToTop handle it
       navigate(path);
     }
   };
 
   return (
-    <footer className="bg-moyo-dark text-moyo-light py-12 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <footer
+      className="relative bg-moyo-dark text-moyo-light py-12 px-6"
+      style={{
+        backgroundImage: `url(${footerBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-moyo-dark/90"></div>
+
+      {/* Footer Content */}
+      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* Brand & Tagline */}
         <div>
           <h3 className="text-2xl font-bold tracking-wide mb-2 text-white">
