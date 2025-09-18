@@ -5,7 +5,10 @@ import Section from "../components/Section";
 export default function Contact() {
   return (
     <PageWrapper>
-      <Section title="Contact Us">
+      <Section>
+        <h2 className="text-3xl font-bold text-center text-moyo-dark mb-6">
+          Contact Us
+        </h2>
         <p className="text-lg mb-6">
           Need help or have questions? We’re here to support you.
         </p>
@@ -22,7 +25,10 @@ export default function Contact() {
         </div>
       </Section>
 
-      <Section title="Send Us a Message">
+      <Section>
+        <h2 className="text-3xl font-bold text-center text-moyo-dark mb-6">
+          Send Us a Message
+        </h2>
         <form className="space-y-4">
           <input
             type="text"

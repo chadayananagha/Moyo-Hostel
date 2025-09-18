@@ -16,7 +16,6 @@ export default function Booking() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can integrate with a service like Formspree, EmailJS, or Netlify Forms here
     console.log("Form submitted:", formData);
     alert("Thanks for reaching out! We'll get back to you soon.");
     setFormData({ name: "", email: "", message: "" });
@@ -35,7 +34,7 @@ export default function Booking() {
 
         {/* Room Info */}
         <div className="bg-white rounded shadow p-6 mb-10 text-left">
-          <h2 className="text-2xl font-semibold text-moyo-dark mb-4">
+          <h2 className="text-2xl font-semibold text-center text-moyo-dark mb-4">
             Room Options
           </h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -48,7 +47,7 @@ export default function Booking() {
 
         {/* Contact CTA */}
         <div className="bg-white rounded shadow p-6 text-left mb-10">
-          <h2 className="text-2xl font-semibold text-moyo-dark mb-4">
+          <h2 className="text-2xl font-semibold text-center text-moyo-dark mb-4">
             How to Book
           </h2>
           <p className="text-gray-700 mb-4">
@@ -67,7 +66,7 @@ export default function Booking() {
 
         {/* Contact Form */}
         <div className="bg-white rounded shadow p-6 text-left">
-          <h2 className="text-2xl font-semibold text-moyo-dark mb-4">
+          <h2 className="text-2xl font-semibold text-center text-moyo-dark mb-4">
             Or Send Us a Message
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">

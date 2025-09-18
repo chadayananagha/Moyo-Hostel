@@ -5,10 +5,13 @@ import Section from "../components/Section";
 export default function Team() {
   return (
     <PageWrapper>
-      <Section title="Meet the Host Team">
+      <Section>
+        <h2 className="text-3xl font-bold text-center text-moyo-dark mb-6">
+          Meet the Host Team
+        </h2>
         <p className="text-lg leading-relaxed mb-6">
           Moyo Hostel is run by a small, dedicated team who care deeply about
-          student well-being. We’re not landlords or agents we’re hosts,
+          student well-being. We’re not landlords or agents — we’re hosts,
           mentors, and problem-solvers.
         </p>
         <ul className="list-disc list-inside space-y-4 text-moyo-dark mb-6">
