@@ -3,7 +3,9 @@ import React from "react";
 export default function WhyMoyo() {
   return (
     <section className="text-moyo-dark px-6 py-12">
-      <h2 className="text-3xl font-bold text-center mb-6">Why Choose Moyo</h2>
+      <h2 className="text-3xl font-bold text-center mb-6">
+        Why Moyo Feels Like Home
+      </h2>
       <div className="space-y-4 text-base sm:text-lg max-w-3xl mx-auto">
         <p>
           Moyo Hostel is designed specifically for international students,
