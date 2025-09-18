@@ -1,20 +1,23 @@
 import React from "react";
+import { FiArrowRightCircle } from "react-icons/fi";
 
 export default function CheckAvailabilityCTA() {
   return (
-    <section className="bg-[#f4f4f2] py-16 px-6 text-center">
-      <h3 className="text-3xl font-bold text-moyo-dark mb-4">
-        Ready to move in?
+    <section className="text-moyo-dark px-4 sm:px-6 md:px-8 py-12 sm:py-16 animate-fadeIn delay-200">
+      <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 flex items-center justify-center gap-2">
+        <FiArrowRightCircle className="shrink-0" /> Ready to move in?
       </h3>
-      <p className="text-lg text-gray-700 mb-6">
-        Secure your spot at Moyo Hostel and experience premium student living in
-        Hamburg.
-      </p>
-      <a href="/booking">
-        <button className="bg-moyo-dark text-white px-6 py-3 rounded font-semibold hover:bg-[#3b4a36] transition">
-          Check Availability
-        </button>
-      </a>
+      <div className="max-w-full sm:max-w-3xl mx-auto bg-white rounded shadow p-4 sm:p-6 text-sm sm:text-base md:text-lg leading-relaxed space-y-4 text-center">
+        <p className="text-gray-700">
+          Secure your spot at Moyo Hostel and experience premium student living
+          in Hamburg.
+        </p>
+        <a href="/booking">
+          <button className="bg-moyo-dark text-white px-6 py-3 rounded font-semibold hover:bg-[#3b4a36] transition">
+            Check Availability
+          </button>
+        </a>
+      </div>
     </section>
   );
 }

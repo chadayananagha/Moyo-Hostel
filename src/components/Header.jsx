@@ -43,57 +43,70 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Transparent Drawer */}
+      {/* Drawer + Overlay */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            initial={{ x: 300 }}
-            animate={{ x: 0 }}
-            exit={{ x: 300 }}
-            transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 h-full w-64 bg-moyo-dark bg-opacity-90 backdrop-blur-md text-white z-50 shadow-xl"
-          >
-            <button
+          <>
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black z-40"
               onClick={() => setMenuOpen(false)}
-              className="absolute top-4 right-4 text-2xl hover:text-gray-300"
+            />
+
+            {/* Drawer */}
+            <motion.div
+              initial={{ x: 300 }}
+              animate={{ x: 0 }}
+              exit={{ x: 300 }}
+              transition={{ duration: 0.3 }}
+              className="fixed top-0 right-0 h-full w-64 bg-moyo-dark bg-opacity-90 backdrop-blur-md text-white z-50 shadow-xl"
             >
-              <FiX />
-            </button>
-            <div className="p-6 pt-16 space-y-6">
-              <Link
-                to="/"
+              <button
                 onClick={() => setMenuOpen(false)}
-                className="flex items-center space-x-2 hover:text-gray-200"
+                className="absolute top-4 right-4 text-2xl hover:text-gray-300"
               >
-                <FiHome />
-                <span>Home</span>
-              </Link>
-              <Link
-                to="/contact"
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center space-x-2 hover:text-gray-200"
-              >
-                <FiMail />
-                <span>Contact</span>
-              </Link>
-              <Link
-                to="/about"
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center space-x-2 hover:text-gray-200"
-              >
-                <FiInfo />
-                <span>About Us</span>
-              </Link>
-              <Link
-                to="/team"
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center space-x-2 hover:text-gray-200"
-              >
-                <FiUsers />
-                <span>Host Team</span>
-              </Link>
-            </div>
-          </motion.div>
+                <FiX />
+              </button>
+              <div className="p-6 pt-16 space-y-6">
+                <Link
+                  to="/"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center space-x-2 hover:text-gray-200"
+                >
+                  <FiHome />
+                  <span>Home</span>
+                </Link>
+                <Link
+                  to="/contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center space-x-2 hover:text-gray-200"
+                >
+                  <FiMail />
+                  <span>Contact</span>
+                </Link>
+                <Link
+                  to="/about"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center space-x-2 hover:text-gray-200"
+                >
+                  <FiInfo />
+                  <span>About Us</span>
+                </Link>
+                <Link
+                  to="/team"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center space-x-2 hover:text-gray-200"
+                >
+                  <FiUsers />
+                  <span>Host Team</span>
+                </Link>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
