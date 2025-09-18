@@ -62,6 +62,7 @@ export default function Header() {
             <div className="p-6 pt-16 space-y-6">
               <Link
                 to="/"
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center space-x-2 hover:text-gray-200"
               >
                 <FiHome />
@@ -69,6 +70,7 @@ export default function Header() {
               </Link>
               <Link
                 to="/contact"
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center space-x-2 hover:text-gray-200"
               >
                 <FiMail />
@@ -76,6 +78,7 @@ export default function Header() {
               </Link>
               <Link
                 to="/about"
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center space-x-2 hover:text-gray-200"
               >
                 <FiInfo />
@@ -83,6 +86,7 @@ export default function Header() {
               </Link>
               <Link
                 to="/team"
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center space-x-2 hover:text-gray-200"
               >
                 <FiUsers />
