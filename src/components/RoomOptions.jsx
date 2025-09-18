@@ -8,8 +8,12 @@ export default function RoomOptions() {
       className="px-4 sm:px-6 md:px-8 py-12 sm:py-16 text-moyo-dark animate-fadeIn"
     >
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 flex items-center justify-center gap-2">
-        <FiHome /> Room Options
+        <span className="hidden sm:inline">
+          <FiHome className="shrink-0" />
+        </span>
+        Room Options
       </h2>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-full sm:max-w-4xl mx-auto">
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center hover:shadow-lg transition">
           <h4 className="text-lg sm:text-xl font-semibold mb-2">Shared Room</h4>

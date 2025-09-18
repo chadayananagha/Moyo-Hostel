@@ -1,8 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FiHome, FiMail, FiInfo, FiUsers } from "react-icons/fi";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavAndScroll = (path) => {
+    if (location.pathname === path) {
+      // Already on the page—just scroll up
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Navigate and let ScrollToTop handle it
+      navigate(path);
+    }
+  };
+
   return (
     <footer className="bg-moyo-dark text-moyo-light py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -29,40 +42,40 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-2 text-white">Quick Links</h4>
           <ul className="space-y-3 text-sm">
             <li>
-              <Link
-                to="/"
+              <button
+                onClick={() => handleNavAndScroll("/")}
                 className="flex items-center space-x-2 hover:text-gray-200"
               >
                 <FiHome />
                 <span>Home</span>
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
-                to="/contact"
+              <button
+                onClick={() => handleNavAndScroll("/contact")}
                 className="flex items-center space-x-2 hover:text-gray-200"
               >
                 <FiMail />
                 <span>Contact</span>
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
-                to="/about"
+              <button
+                onClick={() => handleNavAndScroll("/about")}
                 className="flex items-center space-x-2 hover:text-gray-200"
               >
                 <FiInfo />
                 <span>About Us</span>
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
-                to="/team"
+              <button
+                onClick={() => handleNavAndScroll("/team")}
                 className="flex items-center space-x-2 hover:text-gray-200"
               >
                 <FiUsers />
                 <span>Host Team</span>
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

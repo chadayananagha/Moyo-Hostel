@@ -5,7 +5,10 @@ export default function WhyMoyo() {
   return (
     <section className="text-moyo-dark px-4 sm:px-6 md:px-8 py-12 sm:py-16 animate-fadeIn">
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 flex items-center justify-center gap-2">
-        <FiHeart className="shrink-0" /> Why Moyo Feels Like Home
+        <span className="hidden sm:inline">
+          <FiHeart className="shrink-0" />
+        </span>
+        Why Moyo Feels Like Home
       </h2>
       <div className="max-w-full sm:max-w-3xl mx-auto bg-white rounded shadow p-4 sm:p-6 text-sm sm:text-base md:text-lg leading-relaxed space-y-4">
         <p>
