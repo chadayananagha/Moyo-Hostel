@@ -6,7 +6,10 @@ import Section from "../components/Section";
 export default function Register() {
   return (
     <PageWrapper>
-      <Section title="Create Your Account">
+      <Section>
+        <h2 className="text-3xl font-bold text-center text-moyo-dark mb-6">
+          Create Your Account
+        </h2>
         <form className="space-y-6 max-w-md mx-auto">
           <input
             type="text"
